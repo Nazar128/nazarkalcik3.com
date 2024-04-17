@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sedan:ital@0;1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+:root{
+    --main-color:#0b178f;
+    --text-color:#1c2844;   
+}
+section{
+    padding: 50px 10%;
+}
+img{
+    width: 2; 
+}
+body{
+    color: var(--text-color)
+}
+*::selection{
+    color: #fff;
+    background: var(--main-color);
+}
+/*custom scroll bar*/
+html::-webkit-scrollbar{
+    width: 0.5rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: -10;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 18px 10%;
+    transition: 0.2s;
+    
+    
+}
+header.shadow{
+    box-shadow: 0 0 4px rgb(14 55 54 / 15%);
+}
+.logo{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color)  
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+.navbar a:hover{
+    background: var(--text-color);
+    color: #fff;
+}
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100;
+    display: none;
+}
+.AnaSayfa{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(17rem,1fr));
+    align-items: center;
+    gap: 1.5rem;
+}
+.AnaSayfa-text span{
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.AnaSayfa-text h1{
+    font-size: 3.4rem;
+    color: var(--main-color);
+}
+.AnaSayfa-text h2{
+    font-size: 1.6rem;
+    font-weight: bolder;
+}
+.AnaSayfa-text p{
+    font-weight: 400;
+    margin: 0.7rem 0 1rem;
+}
+.AnaSayfa-img{
+    padding: 80px;
+}
+.btn{
+    display: inline-block;
+    background: var(--text-color);
+    padding: 0.8rem 2 rem;
+    color: #fff;
+    font-weight: 500;
+}
+.btn:hover{
+    background: var(--main-color);
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+.Hakkımda{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(17rem,1fr));
+    gap: 1.5rem;
+}
+.Hakkımda-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.Hakkımda-title h1{
+    color: var(--main-color);
+    font-size: 1.7rem;
+}
+.Hakkımda-title span,
+.heading span
+{
+    border-bottom: 3px solid var(--main-color);
+}
+.Hakkımda-title h2{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.Hakkımda-img{
+    width: 150px;
+    height: 150px;
+    margin-top: 2rem;
+}
+.Hakkımda-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    background: var(--main-color);
+}
+.social{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+.social a{
+    .bx {
+        margin-right: 1rem;
+        font-size: 24px;
+        color: #fff;
+        padding: 10px;
+        border-radius: 4px;
+        background: var(--text-color); 
+     }
+} 
+.social a {
+    .bx:hover{
+        background: var(--main-color);
+    }
+}
+.Hakkımda-text p{
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+.heading{
+    text-align: center;
+}
+.heading h1{
+    font-size: 1.7rem;
+    font-weight: bolder;
+    color: var(--main-color);
+}
+.Iletisim-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.Iletisim-form formm{
+    position: relative;
+    width: 400px;
+}
+form input,
+form textarea{
+    width: 100%;
+    padding: 14px;
+    border: none;
+    outline: none;
+    background: rgb(28,40,68,0.8);
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    color: #fff;
+}
+form input::placeholder,
+form textarea::placeholder {
+    color: #fff;
+}
+textarea{
+    resize: none;
+    height: 200px;
+}
+form .Gonder-btn{
+    max-width: 110px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+form .Gonder-btn:hover{
+    background: var(--main-color);
+}
+.copyright{
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    background: var(--text-color);
+}
+/*making responsive*/
+@media (max-width:991px){
+    header{
+        padding: 18px 4%;
+    }
+    section{
+        padding: 50px 4%;
+    }
+}
+@media (max-width: 881px){
+    .AnaSayfa-text span{
+        font-size: 1.1rem;
+    }
+    .AnaSayfa-text h1{
+        font-size: 3rem;
+    }
+    .AnaSayfa-text h2{
+        font-size: 1.2rem;
+    }
+    .AnaSayfa-text p{
+        font-size: 0.938rem;
+    }
+}
+@media (max-width: 768px){
+    
+    header{
+        padding: 11px 4%;
+        
+    }
+    /*#menu-icon{
+        
+        display: initial;      
+    }*/
+    header .navbar{
+            position: absolute;
+            top: 90px;
+            left: 0;
+            right: 0;
+            display: initial;
+            flex-direction: column;
+            background: #fff;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+            transition: 0.2s ease;
+            text-align: left;
+        
+    } 
+    .navbar {
+        .active{ 
+        top: 100%;  
+        }
+    }
+    .navbar a{
+        font-size: 9px;
+        padding: 0.2rem;
+        border-left: 1px solid var(--main-color);
+        margin: 0.7rem;
+        display: block;
+    }
+    .navbar a:hover{
+        color: #fff;
+        background: var(--text-color);
+        border: none;
+    }
+    .AnaSayfa-text span{
+        font-size: 1rem;
+    }
+    .AnaSayfa-text h1{
+        font-size: 2.4rem;
+    }
+    .AnaSayfa-text h2{
+        font-size: 1.1rem;
+    }
+    .AnaSayfa-text p br{
+        display: contents;
+    }
+    .AnaSayfa-img{
+        padding: 10px;
+    }
+    
+}
+@media (max-width:618px){
+    .AnaSayfa-img{
+        padding: 5px;
+    }
+}
+@media (max-width:350px){
+    
+    .AnaSayfa-text h1{
+        font-size: 1rem;
+    }
+    .AnaSayfa-text h2{
+        font-size: 0.5rem;
+    }
+    .AnaSayfa-img{
+        width: 300;
+        height: 300;
+    }
+    .btn{
+        padding: 0.6rem 1.7rem;
+    }
+    .Hakkımda-title h1{
+        font-size: 1.4rem;
+    }
+    .Hakkımda-title h2{
+        font-size: 0.9rem;
+    }
+    .heading h1{
+        font-size: 1.4rem;
+    }
+    p{
+        font-size: 0.800rem;
+    }
+}
